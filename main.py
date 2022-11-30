@@ -67,7 +67,8 @@ def main_data():
 
 def each_link():
     driver = webdriver.Firefox(options=options)
-    for i in range(0,20):
+    end = 5948
+    for i in range(20,end):
         key = str(i).zfill(4)
         print(key)
         res = db.get(key)
