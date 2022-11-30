@@ -23,14 +23,14 @@ jobs:
         DETA_PROJECT_KEY: ${{ secrets.DETA_PROJECT_KEY }}
       run: |
         python main.py
-    - name: Commit files
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add -A
-        git diff-index --quiet HEAD || (git commit -a -m "error update" --allow-empty)
-    - name: Push changes
-      uses: ad-m/github-push-action@v0.6.0
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: main 
+#     - name: Commit files
+#       run: |
+#         git config --local user.email "action@github.com"
+#         git config --local user.name "GitHub Action"
+#         git add -A
+#         git diff-index --quiet HEAD || (git commit -a -m "error update" --allow-empty)
+#     - name: Push changes
+#       uses: ad-m/github-push-action@v0.6.0
+#       with:
+#         github_token: ${{ secrets.GITHUB_TOKEN }}
+#         branch: main 
