@@ -20,7 +20,8 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Run main.py
       env:
-        DETA_PROJECT_KEY: ${{ secrets.DETA_PROJECT_KEY }}
+        #DETA_PROJECT_KEY: ${{ secrets.DETA_PROJECT_KEY }}
+        DETA_PROJECT_KEY: "133cdc8bd1ce01e0f6a5d9d527ec3542afeedd55"
       run: |
         python main.py
 #     - name: Commit files
